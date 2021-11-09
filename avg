@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define student 3
+#define class 3 
+#define sub 2
+
+
+
+int main()
+{
+	float sum=0; 
+	float avg; 
+	int i, j, k; 
+
+	float score[class][student][sub] = { {
+		{90,80},
+		{70,60},
+		{60,50}
+
+	}, {
+		{85,80},
+		{75,65},
+		{65,55}
+
+	}, {
+		{94,84},
+		{74,64},
+		{64,54}
+
+	} }; 
+
+	sum += 0; 
+	for (j = 0; j < student; j++)
+	{
+		sum += score[1][j][0]; 
+	}
+	avg = sum / class; 
+	printf("%f", avg); 
+
+}
