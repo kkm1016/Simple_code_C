@@ -1,0 +1,49 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+void printarray(char* arr, int row, int clmn)
+{
+	printf("Arr : \n"); 
+	for (int i = 0; i < row*clmn; i++)
+	{
+		if (i == clmn)
+		{
+			printf("\n"); 
+			
+		}
+		printf("%c ", *(arr + i));
+	}
+	printf("\n"); 
+
+	return; 
+}
+
+void swap(char* arr, int idx1, int idx2) 
+{
+	char temp; 
+	temp = *(arr + idx1); 
+	*(arr + idx1) = *(arr + idx2); 
+	*(arr + idx2) = temp; 
+
+	return; 
+}
+
+int main()
+{
+	srand(time(NULL)); 
+	char arr[2][5]; 
+	char c; 
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			arr[i][j] = rand() % 26 + 65; 
+		}
+	}
+	printarray(arr, 2, 5); 
+	swap(arr, 3, 9); 
+	printarray(arr, 2, 5); 
+	return 0; 
+}
