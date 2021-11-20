@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+int main()
+{
+	int* a = NULL; 
+	int i; 
+
+	printf("value of null pointer: %p\n\n", a);
+
+	a = &i; 
+
+	printf("Enter the intergers\n"); 
+	scanf("%d", a); 
+
+	printf("Address of i: %p the value of i: %d", a, *a); 
+
+	return 0; 
+}
